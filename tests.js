@@ -4,21 +4,21 @@ describe("Conceptos básicos: variables", () => {
     it("Usaremos let para definir variables", () => {
         let name = "Frodo";
         // cambia el valor de la variable
-        
+        name = "Elrond";
         expect(name).to.equal("Elrond");
     });
 
     it("Usaremos const para definir constantes", () => {
         // "name" es constante, no se puede reasignar
         // Cambia su valor
-        const name = "Frodo";
+        const name = "Bilbo";
 
         expect(name).to.equal("Bilbo");
     });
 
     it("No usaremos var para definir variables", () => {
         // utiliza let en lugar de "var" para definir variables
-        var country = "Gondor";
+        let country = "Gondor";
 
         expect(country).to.equal("Gondor");
     });
@@ -26,26 +26,26 @@ describe("Conceptos básicos: variables", () => {
 
 describe("Números en Javascript", () => {
     it("Permite definir números y realizar operaciones", () => {
-        const n = 0;
+        const n = 7;
         const result = 100 + n;
         expect(result).to.equal(107)
     });
 
     it("Los números pueden ser enteros o decimales", () => {
-        const n = 30;
+        const n = 30.64;
         expect(n).to.equal(30.64);
     })
 
     it("Puedes utilizar ++ para autoincrementar un número en 1 unidad", () => {
         let n = 6;
         // incrementa n usando el operador ++
-        const result = 100 + n;
+        const result = 100 + ++n;
         expect(result).to.equal(107)
     });
     it("Puedes utilizar -- para decrementar un número en 1 unidad", () => {
         let n = 8;
         // decrementa n usando el operador --
-        const result = 100 + n;
+        const result = 100 + --n;
         expect(result).to.equal(107)
     });
 });
@@ -53,24 +53,24 @@ describe("Números en Javascript", () => {
 describe("Operaciones aritméticas", () => {
     it("Usando suma", () => {
         const a = 10;
-
+        const b = 90;
         expect(a+b).to.equal(100);
     })
     it("Usando multiplicación", () => {
         const a = 10;
-
+        const b = 1.3;
         expect(a*b).to.equal(13);
     })
     it("Usando división", () => {
         const a = 10;
-
+        const b = 4;
         expect(a/b).to.equal(2.5);
     })
 })
 
 describe("Strings", () => {
     it("Los strings representan cadenas de texto", () => {
-        let weapon = "espada";
+        let weapon = "hacha";
         let phrase = "Cuenta con mi " + weapon + "!";
         expect(phrase).to.equal("Cuenta con mi hacha!")
     });
@@ -78,7 +78,7 @@ describe("Strings", () => {
 
 describe("Booleanos", () => {
    it("un booleano puede tomar dos valores", () => {
-        let b = true;
+        let b = true;        
         expect(b).to.be(false);
    }) 
 });
